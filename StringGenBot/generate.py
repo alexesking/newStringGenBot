@@ -55,7 +55,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
     if telethon:
         ty = "تيرمكـس - Termux"
     else:
-        ty = "بايروجـرام - PyroGram
+        ty = "بايروجـرام - PyroGram"
     if is_bot:
         ty += "بوت"
     await msg.reply(f"**» استخـراج الجلسـة **{ty}** بواسطـة xXStrem جـارٍ..**.")
