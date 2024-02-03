@@ -25,7 +25,11 @@ import config
 
 
 
-ask_ques = "**» يرجـى اختيـار أحد الجلسـات الآتيـة إذا كنت تريـد استخـراج تيرمكـس فاختـر تيرمكـس أما إذا كنت تريد استخـراج بايروجـرام اختـر بايروجرام  ⌬  ..**"
+ask_ques = "** ✗ ⎊ ذا كنـت تـريد تنـصيـب سـورس مـيوزك
+⎊ فـأسـتـخـࢪج جـلـسـة بـايـروجـرام
+⎊ واذا تـريـد تنـصـيب سـورس تـيلـثون
+⎊ فـأسـتـخـࢪج جـلـسـة تـيـرمـكـس
+⎊ يـوجـد اسـتـخـرج جـلسـات ل البـوتات **"
 buttons_ques = [
     [
         InlineKeyboardButton("- بايروجـرام", callback_data="pyrogram"),
@@ -58,7 +62,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
         ty = "بايروجـرام - PyroGram"
     if is_bot:
         ty += "بوت"
-    await msg.reply(f"**» استخـراج الجلسـة **{ty}** بواسطـة xXStrem جـارٍ..**.")
+    await msg.reply(f"**» استخـراج الجلسـة **{ty}** بواسطـة @z_z_zv جـارٍ..**.")
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, "**⎆ أرسـل الأيبـي أيـدي الخـاص بـك\n للتخطـي أرسـل /skip ...**", filters=filters.text)
     if await cancelled(api_id_msg):
@@ -158,7 +162,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
         string_session = client.session.save()
     else:
         string_session = await client.export_session_string()
-    text = f"**هذا هو {ty} كـود جلسـة** \n\n`{string_session}` \n\n**مستخـرج مـن :** @TopSessionBoT\n🍒 **ملاحظـة :** لا تشارك الكود لأحـد لأنـه يستطيع اختراق حسابك من خلالـه قنـاة السورس @xXStrem ."
+    text = f"**هذا هو {ty} كـود جلسـة** \n\n`{string_session}` \n\n**مستخـرج مـن :** @G4ZBOT\n🍒 **ملاحظـة :** لا تشارك الكود لأحـد لأنـه يستطيع اختراق حسابك من خلالـه قنـاة السورس @z_z_zv ."
     try:
         if not is_bot:
             await client.send_message("me", text)
@@ -167,7 +171,7 @@ async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bo
     except KeyError:
         pass
     await client.disconnect()
-    await bot.send_message(msg.chat.id, "» تم استخـراج {} كود جلسـة.\n\nيرجـى تفقـد الرسائـل المحفوظـة ! \n\n**مستخـرج مـن** @xXStrem".format("تيرمكـس - Termux" if telethon else "بايروجـرام - PyroGram"))
+    await bot.send_message(msg.chat.id, "» تم استخـراج {} كود جلسـة.\n\nيرجـى تفقـد الرسائـل المحفوظـة ! \n\n**مستخـرج مـن** @G4ZBOT".format("تيرمكـس - Termux" if telethon else "بايروجـرام - PyroGram"))
 
 
 async def cancelled(msg):
