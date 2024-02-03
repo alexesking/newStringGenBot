@@ -20,11 +20,11 @@ async def must_join_channel(bot: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply_photo(
-                    photo="https://telegra.ph/file/2f7d46d6b87635fe01d93.jpg", caption=f"» عـذرًا عـزيـزي عليك الاشتـراك في قنـاة البـوت !",
+                    photo="https://telegra.ph/file/2f7d46d6b87635fe01d93.jpg", caption=f"» عـذرًا عـزيـزي عليك الاشتـراك في جروب البـوت ثم ارسل /start !",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("- قنـاة السـورس .", url=link),
+                                InlineKeyboardButton("- جروب اليكسـس .", url=link),
                             ]
                         ]
                     )
