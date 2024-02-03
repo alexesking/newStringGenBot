@@ -12,20 +12,24 @@ async def start(bot: Client, msg: Message):
     me2 = (await bot.get_me()).mention
     await bot.send_message(
         chat_id=msg.chat.id,
-        text=f"""Hᴇʏ {msg.from_user.mention},
+        text=f"""ٲهلٲ بك عزيزي {msg.from_user.mention},
 
-Tʜɪs ɪs {me2},
-Aɴ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ sᴛʀɪɴɢ sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ ᴩʏʀᴏɢʀᴀᴍ.
+⎊¦ فـي بـوت اسـتـخـراج الـجـلـسـات
+⎊¦ يمكنك استخراج الجلسات الـتالية
+⎊¦ بايروجرام للحسابات & بايروجرام للبوتات
+⎊¦ بـايـروجـرام مـيوزك احـدث إصـدار 
+⎊¦ تيرمـكـس للحسابات & تيرمـكـس للبوتات
 
-Mᴀᴅᴇ ᴡɪᴛʜ 🖤 ʙʏ : ✗𝙰𝙻𝙴𝚇𝙴𝚂✗(tg://user?id={OWNER_ID}) !""",
+⎊¦ بواسطـة ✗𝙰𝙻𝙴𝚇𝙴𝚂✗ @z_z_zv
+ """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="🙄 ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ 🙄", callback_data="generate")
+                    InlineKeyboardButton(text="بدٲ ٲستخرٲج جلسه", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("❣️ sᴏᴜʀᴄᴇ ❣️", url="https://github.com/AnonymousX1025/StringGenBot"),
-                    InlineKeyboardButton("🥀 ᴅᴇᴠᴇʟᴏᴩᴇʀ 🥀", user_id=OWNER_ID)
+                    InlineKeyboardButton("قنٲة ٲلمطؤر", url="https://t.me/T_T_T_U"),
+                    InlineKeyboardButton("✘𝙰𝙻𝙴𝚇𝙴𝚂✘", user_id=OWNER_ID)
                 ]
             ]
         ),
